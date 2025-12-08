@@ -3,7 +3,7 @@ import type { Route } from './+types/details';
 import { Link } from 'react-router';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-// Utilizei client loader somente para teste, pois o ideal em prodrução seria usar server loader
+// Utilizei client loader somente para teste, pois o ideal em produção seria usar server loader
 export async function clientLoader({ request, params }: Route.ClientLoaderArgs) {
 	const res = await fetch(`http://localhost:8000/projects/${params.id}`);
 
